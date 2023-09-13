@@ -69,11 +69,11 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.USERNAME }}/shopping-app-react:latest
+          tags: ${{ secrets.USERNAME }}/demodeploy:latest
 
       - name: Run the image in a container
         uses: addnab/docker-run-action@v3
         with:
-          image: ${{ secrets.USERNAME }}/shopping-app-react:latest
+          image: ${{ secrets.USERNAME }}/demodeploy:latest
           run: |
             echo "runing the docker image"
